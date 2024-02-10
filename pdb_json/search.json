@@ -1,0 +1,218 @@
+{
+  "query": {
+    "type": "group",
+    "logical_operator": "and",
+    "nodes": [
+      {
+        "type": "terminal",
+        "service": "text",
+        "parameters": {
+          "attribute": "rcsb_entry_info.selected_polymer_entity_types",
+          "operator": "exact_match",
+          "negation": false,
+          "value": "Protein (only)"
+        }
+      },
+      {
+        "type": "group",
+        "nodes": [
+          {
+            "type": "terminal",
+            "service": "text",
+            "parameters": {
+              "attribute": "exptl.method",
+              "operator": "exact_match",
+              "negation": false,
+              "value": "X-RAY DIFFRACTION"
+            }
+          },
+          {
+            "type": "terminal",
+            "service": "text",
+            "parameters": {
+              "attribute": "rcsb_entry_info.diffrn_resolution_high.value",
+              "operator": "less",
+              "negation": false,
+              "value": 3
+            }
+          }
+        ],
+        "logical_operator": "and"
+      },
+      {
+        "type": "terminal",
+        "service": "text",
+        "parameters": {
+          "attribute": "rcsb_struct_symmetry.type",
+          "operator": "exact_match",
+          "negation": true,
+          "value": "Asymmetric"
+        }
+      },
+      {
+        "type": "terminal",
+        "service": "text",
+        "parameters": {
+          "attribute": "rcsb_struct_symmetry.type",
+          "operator": "exact_match",
+          "negation": true,
+          "value": "Dihedral"
+        }
+      },
+      {
+        "type": "terminal",
+        "service": "text",
+        "parameters": {
+          "attribute": "rcsb_struct_symmetry.type",
+          "operator": "exact_match",
+          "negation": true,
+          "value": "Helical"
+        }
+      },
+      {
+        "type": "terminal",
+        "service": "text",
+        "parameters": {
+          "attribute": "rcsb_struct_symmetry.type",
+          "operator": "exact_match",
+          "negation": true,
+          "value": "Icosahedral"
+        }
+      },
+      {
+        "type": "terminal",
+        "service": "text",
+        "parameters": {
+          "attribute": "rcsb_struct_symmetry.type",
+          "operator": "exact_match",
+          "negation": true,
+          "value": "Octahedral"
+        }
+      },
+      {
+        "type": "terminal",
+        "service": "text",
+        "parameters": {
+          "attribute": "rcsb_struct_symmetry.type",
+          "operator": "exact_match",
+          "negation": true,
+          "value": "Tetrahedral"
+        }
+      },
+      {
+        "type": "terminal",
+        "service": "text",
+        "parameters": {
+          "attribute": "rcsb_entry_info.polymer_entity_count_protein",
+          "operator": "equals",
+          "negation": false,
+          "value": 1
+        }
+      },
+      {
+        "type": "group",
+        "nodes": [
+          {
+            "type": "terminal",
+            "service": "text",
+            "parameters": {
+              "attribute": "rcsb_struct_symmetry.type",
+              "operator": "exact_match",
+              "negation": false,
+              "value": "Cyclic"
+            }
+          },
+          {
+            "type": "terminal",
+            "service": "text",
+            "parameters": {
+              "attribute": "rcsb_struct_symmetry.kind",
+              "operator": "exact_match",
+              "negation": false,
+              "value": "Global Symmetry"
+            }
+          },
+          {
+            "type": "terminal",
+            "service": "text",
+            "parameters": {
+              "attribute": "rcsb_struct_symmetry.symbol",
+              "operator": "exact_match",
+              "negation": false,
+              "value": "C2"
+            }
+          },
+          {
+            "type": "terminal",
+            "service": "text",
+            "parameters": {
+              "attribute": "rcsb_struct_symmetry.oligomeric_state",
+              "operator": "exact_match",
+              "negation": false,
+              "value": "Homo 2-mer"
+            }
+          }
+        ],
+        "logical_operator": "and"
+      },
+      {
+        "type": "terminal",
+        "service": "text",
+        "parameters": {
+          "attribute": "rcsb_entry_container_identifiers.entry_id",
+          "operator": "in",
+          "negation": true,
+          "value": [
+            "11AS",
+            "117E",
+            "10GS"
+          ]
+        }
+      },
+      {
+        "type": "group",
+        "logical_operator": "and",
+        "nodes": [
+          {
+            "type": "terminal",
+            "service": "text",
+            "parameters": {
+              "attribute": "rcsb_polymer_instance_annotation.annotation_lineage.name",
+              "value": "Coiled coil proteins",
+              "operator": "exact_match"
+            }
+          },
+          {
+            "type": "terminal",
+            "service": "text",
+            "parameters": {
+              "attribute": "rcsb_polymer_instance_annotation.type",
+              "operator": "exact_match",
+              "value": "SCOP",
+              "negation": false
+            }
+          }
+        ],
+        "label": "nested-attribute"
+      }
+    ],
+    "label": "text"
+  },
+  "return_type": "entry",
+  "request_options": {
+    "paginate": {
+      "start": 0,
+      "rows": 25
+    },
+    "results_content_type": [
+      "experimental"
+    ],
+    "sort": [
+      {
+        "sort_by": "score",
+        "direction": "desc"
+      }
+    ],
+    "scoring_strategy": "combined"
+  }
+}
