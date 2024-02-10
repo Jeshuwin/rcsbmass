@@ -20,14 +20,6 @@ To get started with this notebook, you should have Jupyter installed on your sys
 pip install notebook
 ```
 
-## Getting Started
-
-1. Clone the repository to your local machine.
-
-2. Place your JSON query files in the pdb_json directory.
-
-3. Run the Python script to start the download process based on your search criteria.
-
 ### Setting Up Your Search Criteria
 
 To set up your search criteria:
