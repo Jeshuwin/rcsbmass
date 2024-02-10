@@ -24,7 +24,7 @@ pip install notebook
 
 To set up your search criteria:
 
-1. Go to the [RCSB PDB website](https://www.rcsb.org) and use the Advanced Search options to define your search criteria.
+1. Go to the [RCSB PDB website](https://www.rcsb.org) and use the Advanced Search Query Builder options to define your search criteria.
 2. Once you have your results, click on the "Search API" button as shown below:
 
    ![Search API Button](https://i.ibb.co/M9pNbhH/pdbs.png)
