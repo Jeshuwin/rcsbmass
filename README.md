@@ -2,7 +2,7 @@
 
 This repository contains a tool that leverages the RCSB PDB Search API to facilitate the bulk downloading of Protein Data Bank (PDB) files and their biological assemblies. With the help of predefined JSON queries, users can easily specify and modify search criteria to retrieve and download a large number of PDB files efficiently.
 
-It simplifies the process of specifying search criteria and handling bulk downloads, making it ideal for researchers and scientists working with large sets of protein structures.
+It simplifies the process of specifying search criteria and handling bulk downloads, making it ideal for working with large sets of protein structures.
 
 ## Features
 
